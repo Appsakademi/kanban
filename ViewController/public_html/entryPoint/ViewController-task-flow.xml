@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-mobile-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.0">
+  <task-flow-definition id="ViewController-task-flow">
+    <default-activity>Home</default-activity>
+    <view id="Home">
+      <page>/Home.amx</page>
+    </view>
+    <view id="Password">
+      <page>/Password.amx</page>
+    </view>
+    <control-flow-rule id="__1">
+      <from-activity-id>Home</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>to_Password</from-outcome>
+        <to-activity-id>Password</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>Password</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>_back</from-outcome>
+        <to-activity-id>Home</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <page-flow-scope-behavior>
+      <push-new/>
+    </page-flow-scope-behavior>
+  </task-flow-definition>
+</adfc-mobile-config>

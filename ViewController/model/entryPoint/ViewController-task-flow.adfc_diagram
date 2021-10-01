@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">Home</property>
+      <property
+         name="x">431.0</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Home&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">200.84473</property>
+      <property
+         name="page">/Home.amx</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">Password</property>
+      <property
+         name="x">657.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Password&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">198.5459</property>
+      <property
+         name="page">/Password.amx</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="View3">
+      <property
+         name="fromOutcome">to_Password</property>
+      <property
+         name="sdm:polyPoints">R46,472.0,196.99414,615.9441,194.69531,L46</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase5"
+      from="View3"
+      to="View2">
+      <property
+         name="fromOutcome">_back</property>
+      <property
+         name="sdm:polyPoints">L54,616.0,201.69531,472.05588,203.99414,R54</property>
+   </ControlFlowCase>
+</SDM>

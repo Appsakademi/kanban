@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.1.45" id="DataBindings"
+             SeparateXMLFiles="false" Package="mobile" ClientType="Generic">
+  <pageMap>
+    <page path="/Home.amx" usageId="mobile_HomePageDef"/>
+    <page path="/Password.amx" usageId="mobile_PasswordPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="mobile_HomePageDef" path="mobile.pageDefs.HomePageDef"/>
+    <page id="mobile_PasswordPageDef" path="mobile.pageDefs.PasswordPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="DataControlDC" path="application.DataControlDC"/>
+  </dataControlUsages>
+</Application>

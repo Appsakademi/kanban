@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+<amx:loadBundle basename="com.oracle.e1.jdemf.bundle.jdemfResourceBundle" var="jdeBundle" id="lb1"/>
+  <amx:panelPage id="pp1">
+       <amx:facet name="header">
+            <amx:outputText value="#{jdeBundle.LEGAL_TERMS}" id="ot1"/>
+        </amx:facet>
+        <amx:facet name="secondary">
+        <amx:commandButton   text="#{jdeBundle.DONE}" id="cb1" actionListener="#{pageFlowScope.eulaBean.doneEULA}"/>
+        </amx:facet>
+          <amx:verbatim id="v1">
+    
+    <![CDATA[
+    
+<p class="MsoNormal"
+ style="margin-bottom: 0.0001pt; text-align: center; line-height: normal;"><b><span
+ style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; color: black;">MY END
+USER LICENSE
+AGREEMENT</span></b>
+</p>
+    Bu uygulama Apps Akademi tarafından Toyotetsu için geliştirilmiştir. Bütün hakları saklıdır. Uygulama, JD Edwards ekranını simüle etmektedir. 
+    Bir geliştirme ihtiyacınız olduğunda mobil uygulamada değil, ekranda geliştirme yapınız.
+    
+    ]]>
+    </amx:verbatim>
+  </amx:panelPage>
+</amx:view>

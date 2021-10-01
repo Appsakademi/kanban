@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:features xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf">
+  <adfmf:feature id="entryPoint" name="entryPoint">
+    <adfmf:content id="entryPoint.1">
+      <adfmf:amx file="entryPoint/ViewController-task-flow.xml#ViewController-task-flow">
+        <adfmf:includes>
+          <adfmf:include type="JavaScript" file="js/jdemfJavascript.js" id="i1"/>
+        </adfmf:includes>
+      </adfmf:amx>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="EULA" name="EULA">
+    <adfmf:content id="EULA.1">
+      <adfmf:amx file="EULA/eula.amx"/>
+    </adfmf:content>
+  </adfmf:feature>
+</adfmf:features>

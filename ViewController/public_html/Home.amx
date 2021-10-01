@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+  <amx:panelPage id="pp1">
+    <amx:facet name="header">
+      <amx:outputText value="Kanban" id="ot1"/>
+    </amx:facet>
+    <amx:facet name="secondary">
+      <amx:commandButton id="cb2" action="to_Password" text="Şifre" disabled="#{empty bindings.password.inputValue}"/>
+    </amx:facet>
+    <!-- En dıştaki grup -->
+    <amx:panelGroupLayout id="pgl1">
+      <!-- Personel sicil grup -->
+      <amx:panelGroupLayout id="pgl2">
+        <amx:inputText label="Personel Sicil" id="it1" value="#{bindings.sicilNo.inputValue}"/>
+      </amx:panelGroupLayout>
+      <!-- Barkod grup -->
+      <amx:panelGroupLayout id="pgl3">
+        <amx:inputText label="Toyota Kanban Barkod ID" id="it4" readOnly="true"/>
+        <amx:inputText label="" id="it2" value="#{bindings.toyotaKanban.inputValue}" 
+                       disabled="#{empty bindings.sicilNo.inputValue}"/>
+        <amx:inputText label="Emniyet Stok Kanban Barkod" id="it5" readOnly="true"/>
+        <amx:inputText label="" id="it3" value="#{bindings.emniyetKanban.inputValue}" 
+                       disabled="#{empty bindings.toyotaKanban.inputValue}"
+                       valueChangeListener="#{bindings.emniyetBarkodVCE.execute}"/>
+      </amx:panelGroupLayout>
+      <!-- Okunan barkodlar grup -->
+      <amx:panelGroupLayout id="pgl4">
+        <amx:outputText id="it6" value="#{bindings.dogruOkutulanKanbanSayisi.inputValue}" inlineStyle="color:Lime;"/>
+        <amx:outputText id="it7" value="#{bindings.yanlisOkutulanKanbanSayisi.inputValue}" inlineStyle="color:Red;"/>
+      </amx:panelGroupLayout>
+      <amx:panelGroupLayout id="pgl5">
+        <amx:outputText value="#{bindings.message.inputValue}" id="ot3"/>
+      </amx:panelGroupLayout>
+      <amx:inputText value="#{bindings.password.inputValue}" label="#{bindings.password.hints.label}" id="it8" rendered="false"/>
+    </amx:panelGroupLayout>
+  </amx:panelPage>
+</amx:view>

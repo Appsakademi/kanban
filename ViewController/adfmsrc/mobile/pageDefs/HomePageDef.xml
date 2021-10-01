@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.1.45" id="HomePageDef"
+                Package="mobile.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="DataControlDC" id="DataControlDCIterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="DataControlDCIterator" id="sicilNo">
+      <AttrNames>
+        <Item Value="sicilNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="DataControlDCIterator" id="toyotaKanban">
+      <AttrNames>
+        <Item Value="toyotaKanban"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="DataControlDCIterator" id="emniyetKanban">
+      <AttrNames>
+        <Item Value="emniyetKanban"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="DataControlDCIterator" id="dogruOkutulanKanbanSayisi">
+      <AttrNames>
+        <Item Value="dogruOkutulanKanbanSayisi"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="DataControlDCIterator" id="yanlisOkutulanKanbanSayisi">
+      <AttrNames>
+        <Item Value="yanlisOkutulanKanbanSayisi"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="DataControlDCIterator" id="message">
+      <AttrNames>
+        <Item Value="message"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction id="emniyetBarkodVCE" RequiresUpdateModel="true" Action="invokeMethod" MethodName="emniyetBarkodVCE"
+                  IsViewObjectMethod="false" DataControl="DataControlDC"
+                  InstanceName="bindings.emniyetBarkodVCE.dataControl.dataProvider"/>
+    <attributeValues IterBinding="DataControlDCIterator" id="password">
+      <AttrNames>
+        <Item Value="password"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

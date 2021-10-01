@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf"
+                   version="1.0" name="Kanban" id="com.company.Kanban" appControllerFolder="ApplicationController"
+                   listener-class="application.LifeCycleListenerImpl">
+  <adfmf:featureReference refId="com.oracle.e1.jdemf.login" id="fr2"/>
+  <adfmf:featureReference refId="entryPoint" id="fr1"/>
+  <adfmf:featureReference id="fr3" refId="com.oracle.e1.jdemf.springboard" showOnNavigationBar="false"
+                          showOnSpringboard="false"/>
+  <adfmf:featureReference id="fr4" refId="com.oracle.e1.jdemf.about"/>
+  <adfmf:featureReference refId="EULA" id="fr5"/>
+  <adfmf:navigation>
+    <adfmf:navigationBar enabled="false"/>
+    <adfmf:springboard enabled="true" showSpringboardAtStartup="false" width="150">
+      <adfmf:springboardFeatureReference refId="com.oracle.e1.jdemf.springboard" id="sfr1"/>
+    </adfmf:springboard>
+  </adfmf:navigation>
+</adfmf:application>
