@@ -63,7 +63,7 @@ public class LifeCycleListenerImpl implements LifeCycleListener
   public void start()
   {
     LoginConfiguration.setDefaultFeature("entryPoint");
-    LoginConfiguration.setCredentials("Nulker", "Nulker1");
+    //LoginConfiguration.setCredentials("Nulker", "Nulker1");
     LoginConfiguration.setEULAFeature("jdemf.example.EULA");
   }
 

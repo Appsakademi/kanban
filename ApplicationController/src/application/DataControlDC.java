@@ -66,7 +66,7 @@ public class DataControlDC {
                     
                     String response = JDERestServiceProvider.jdeRestServiceCall(postData, JDERestServiceProvider.POST, JDERestServiceProvider.FORM_SERVICE_URI);
                     
-                    DeviceManagerFactory.getDeviceManager().sendEmail("yunusemre.byrm@gmail.com", "emre.bayram@appsakademi.com", "MAF", postData + "\n\n\n" + response, null, null, null);
+                    //DeviceManagerFactory.getDeviceManager().sendEmail("yunusemre.byrm@gmail.com", "emre.bayram@appsakademi.com", "MAF", postData + "\n\n\n" + response, null, null, null);
                     
                     P66TPLM1_W66TPLM1B_FormParent p66TPLM1_W66TPLM1B_FormParent = new P66TPLM1_W66TPLM1B_FormParent();
                     try{p66TPLM1_W66TPLM1B_FormParent = (P66TPLM1_W66TPLM1B_FormParent)JSONBeanSerializationHelper.fromJSON(P66TPLM1_W66TPLM1B_FormParent.class, response);}catch(Exception e){}
@@ -96,8 +96,7 @@ public class DataControlDC {
                 } catch (JDERestServiceException e) {
                     JDERestServiceProvider.handleServiceException(e);
                 }catch(Exception e){
-                    e.printStackTrace();
-                    throw new AdfException("Exception" + e.getLocalizedMessage(), AdfException.ERROR);
+                    
                 }
             }else{
                 throw new AdfException("Sicil No!", AdfException.ERROR);
